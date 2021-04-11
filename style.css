@@ -1,0 +1,110 @@
+:root {
+    --darkest-purple: #240046;
+    --dark-purple: #3c096c;
+    --purple: #5a189a;
+    --light-purple: #7b2cbf;
+    --lightest-purple: #9d4edd;
+    --yellow: #ffd66b;
+    --orange: #E4572E;
+    --white: #f4f4f4;
+    --black: #252525;
+    --dark-red: #dd383a;
+    --red: #f94144;
+    --dark-green: #36a503;
+    --green: #38b000;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    color: var(--black);
+    font-family: 'Roboto', sans-serif;
+    font-size: 62.5%;
+    margin: 0;
+    height: 100%;
+    padding: 0;
+    width: 100%;
+}
+.container {
+    align-items: center;
+    background: linear-gradient(
+        to right top,
+        var(--dark-purple),
+        var(--purple)
+    );
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+.content {
+    align-items: center;
+    background: var(--white);
+    background: linear-gradient(
+        to right bottom, 
+        rgba(244, 244, 244, 0.8), 
+        rgba(244, 244, 244, 0.3)
+    );
+    backdrop-filter: blur(2rem);
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    height: 95%;
+    width: 90%;
+    z-index: 3;
+}
+.center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.title {
+    color: var(--darkest-purple);
+    font-size: 3.0rem;
+    padding: 10px;
+    height: 100px;
+    width: 100%;
+}
+.answers {
+    height: 100%;
+    position: relative;
+    width: 100%;
+}
+.answer {
+    border: none;
+    border-radius: 10px;
+    bottom: 50%;
+    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+    color: var(--white);
+    font-size: 2.0rem;
+    font-weight: bold;
+    height: 50px;
+    outline: none;
+    position: absolute;
+    transition: 0.3s;
+    width: 100px;
+}
+.answer:hover {
+    cursor: pointer;
+}
+.answer:active {
+    transform: scale(1.1);
+}
+.err {
+    background: var(--red);
+    border: 2px solid var(--dark-red);
+    left: 25%;
+}
+.err:hover {
+    background: var(--dark-red);
+}
+.success {
+    background: var(--green);
+    border: 2px solid var(--dark-green);
+    right: 25%;
+}
+.success:hover {
+    background: var(--dark-green);
+}
